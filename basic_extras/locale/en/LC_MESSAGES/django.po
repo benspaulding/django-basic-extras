@@ -1,0 +1,28 @@
+# This file is distributed under the same license as the Djange Basic
+# Extras package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Django Basic Extras\n"
+"Report-Msgid-Bugs-To: Ben Spaulding <ben@benspaulding.us>\n"
+"POT-Creation-Date: 2012-07-26 15:45-0500\n"
+"PO-Revision-Date: 2012-07-26 11:53-0500\n"
+"Last-Translator: Ben Spaulding <ben@benspaulding.us>\n"
+"Language-Team: English <en@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Translators: This is the application label.
+#: __init__.py:22
+msgid "basic_extras"
+msgstr "basic extras"
+
+#: models.py:12
+msgid "date created"
+msgstr ""
+
+#: models.py:13
+msgid "date modified"
+msgstr ""
