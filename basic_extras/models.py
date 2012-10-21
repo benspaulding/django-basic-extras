@@ -7,7 +7,7 @@ from basic_extras.utils import now
 
 
 class MetaBase(models.Model):
-    """Abstract base model class that holds some commone metadata fields."""
+    """Abstract base model class that holds some common metadata fields."""
 
     created = models.DateTimeField(_(u'date created'))
     modified = models.DateTimeField(_(u'date modified'))
