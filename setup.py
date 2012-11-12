@@ -19,6 +19,7 @@ setup(
     requires = ['Django (>=1.3.1)'],
     packages = [
         'basic_extras',
+        'basic_extras.templatetags',
         'basic_extras.tests',
     ],
     package_data = {
