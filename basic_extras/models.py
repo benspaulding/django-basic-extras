@@ -3,7 +3,7 @@
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
-from basic_extras.utils import now
+from .utils import now
 
 
 class MetaBase(models.Model):

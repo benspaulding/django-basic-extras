@@ -2,7 +2,7 @@
 
 from django.test import TestCase
 
-from basic_extras.models import MetaBase
+from ..models import MetaBase
 
 
 class MetaBaseTestModel(MetaBase):

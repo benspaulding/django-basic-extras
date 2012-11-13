@@ -11,7 +11,7 @@ used by RequestContext.
 
 def now(request):
     """Provides the current datetime to the context."""
-    from basic_extras.utils import now
+    from .utils import now
     return {'now': now()}
 
 
