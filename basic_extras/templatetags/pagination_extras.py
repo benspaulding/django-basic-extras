@@ -21,10 +21,13 @@ def start_index_reversed(page):
         </ol>
     """
 
-    # Return zero if there are no items, or if we were passed something other
-    # than a ``Page`` object.
+    # Return '' (empty string) if there are no items, or if we were passed
+    # something other than a ``Page`` object. It would be more consistent to
+    # return zero, but the general use case is for this to be used in an HTML
+    # attribute, and returning 0 mucks things up on an un-paginated page, while
+    # an empty string is just ignored.
     if not isinstance(page, Page) or page.paginator.count == 0:
-        return 0
+        return ''
     return page.paginator.count - (page.paginator.per_page * (page.number - 1))
 
 

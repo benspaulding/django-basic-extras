@@ -14,11 +14,11 @@ from ..templatetags.pagination_extras import (start_index_reversed,
 class StartIndexReversedFilterTestCase(TestCase):
 
     def test_passed_not_a_page(self):
-        self.assertEqual(start_index_reversed('foo'), 0)
+        self.assertEqual(start_index_reversed('foo'), '')
 
     def test_paginator_has_zero_items(self):
         paginator = Paginator([], 3, allow_empty_first_page=True)
-        self.assertEqual(start_index_reversed(paginator.page(1)), 0)
+        self.assertEqual(start_index_reversed(paginator.page(1)), '')
 
     def test_the_maths(self):
         object_list = [x for x in range(13)]
