@@ -11,8 +11,8 @@ used by RequestContext.
 
 def now(request):
     """Provides the current datetime to the context."""
-    from .utils import now
-    return {'now': now()}
+    from django.utils import timezone
+    return {'now': timezone.now()}
 
 
 def site(request):

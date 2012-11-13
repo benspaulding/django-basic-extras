@@ -1,9 +1,8 @@
 # -*- coding: utf-8 -*-
 
 from django.db import models
+from django.utils import timezone
 from django.utils.translation import ugettext_lazy as _
-
-from .utils import now
 
 
 class MetaBase(models.Model):
@@ -18,6 +17,6 @@ class MetaBase(models.Model):
 
     def save(self, *args, **kwargs):
         if not self.id:
-            self.created = now()
-        self.modified = now()
+            self.created = timezone.now()
+        self.modified = timezone.now()
         return super(MetaBase, self).save(*args, **kwargs)
