@@ -26,11 +26,11 @@ class MonkeyPatchMethodTestCase(TestCase):
         self.assertEqual(obj.get_bar(), u'bar')
 
     def test_method_overridden(self):
-        self.assertTrue(hasattr(MonkeyPatchTestClass, 'get_foo'))
+        obj = MonkeyPatchTestClass()
+        self.assertEqual(obj.get_foo(), u'foo')
 
         @monkeypatch_method(MonkeyPatchTestClass)
         def get_foo(self):
             return u'oof'
 
-        obj = MonkeyPatchTestClass()
         self.assertEqual(obj.get_foo(), u'oof')

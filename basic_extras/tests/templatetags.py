@@ -5,7 +5,7 @@ from django.test.utils import override_settings
 from django.core.paginator import Paginator
 from django.core.exceptions import ImproperlyConfigured
 from django.http import HttpRequest, QueryDict
-from django.template import Context, RequestContext
+from django.template import Context, RequestContext, TemplateSyntaxError
 
 from ..templatetags.pagination_extras import (start_index_reversed,
                                               page_querystring)
@@ -54,6 +54,12 @@ class PageQuerystringTagTestCase(TestCase):
 
     def test_no_request_in_context(self):
         self.assertRaises(ImproperlyConfigured, page_querystring, Context(), 1)
+
+    def test_page_num_not_int(self):
+        request = HttpRequest()
+        request.GET = QueryDict('')
+        context = RequestContext(request)
+        self.assertRaises(TemplateSyntaxError, page_querystring, context, 'a')
 
     def test_page_1(self):
         # No ``?`` should be returned in this case.
