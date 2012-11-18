@@ -17,13 +17,3 @@ little packages like this is fun. :)
 """
 
 __version__ = '1.0'
-
-# Mark the app_label for translation. This is wrapped in a try/except block to
-# prevent errors when the app is being installed and Django has not yet been
-# installed.
-try:
-    from django.utils.translation import ugettext_noop as _
-    # Translators: This is the application label.
-    _(u'basic_extras')
-except ImportError:
-    pass

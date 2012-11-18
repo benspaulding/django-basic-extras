@@ -5,6 +5,10 @@ from django.utils import timezone
 from django.utils.translation import ugettext_lazy as _
 
 
+# Translators: This is the application label.
+_(u'basic extras')
+
+
 class MetaBase(models.Model):
     """Abstract base model class that holds some common metadata fields."""
 

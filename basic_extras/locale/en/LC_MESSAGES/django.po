@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Django Basic Extras\n"
-"Report-Msgid-Bugs-To: Ben Spaulding <ben@benspaulding.us>\n"
-"POT-Creation-Date: 2012-07-26 15:45-0500\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-11-18 10:06-0600\n"
 "PO-Revision-Date: 2012-07-26 11:53-0500\n"
 "Last-Translator: Ben Spaulding <ben@benspaulding.us>\n"
 "Language-Team: English <en@li.org>\n"
@@ -15,14 +15,14 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #. Translators: This is the application label.
-#: __init__.py:22
-msgid "basic_extras"
+#: models.py:9
+msgid "basic extras"
 msgstr "basic extras"
 
-#: models.py:12
+#: models.py:15
 msgid "date created"
 msgstr ""
 
-#: models.py:13
+#: models.py:16
 msgid "date modified"
 msgstr ""
