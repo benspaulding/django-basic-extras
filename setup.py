@@ -14,7 +14,6 @@ setup(
     author_email='ben@benspaulding.us',
     license='BSD',
     long_description=open('README.rst').read(),
-    requires=['Django (>=1.3.1)'],
     packages=[
         'basic_extras',
         'basic_extras.templatetags',
