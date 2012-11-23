@@ -12,8 +12,8 @@ _(u'basic extras')
 class MetaBase(models.Model):
     """Abstract base model class that holds some common metadata fields."""
 
-    created = models.DateTimeField(_(u'date created'))
-    modified = models.DateTimeField(_(u'date modified'))
+    created = models.DateTimeField(_(u'date created'), editable=False)
+    modified = models.DateTimeField(_(u'date modified'), editable=False)
 
     class Meta:
         abstract = True
