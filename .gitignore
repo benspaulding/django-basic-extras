@@ -1,4 +1,7 @@
 *.py[co]
+__pycache__
+.tox
+.coverage
 .DS_Store
 build/
 dist/
