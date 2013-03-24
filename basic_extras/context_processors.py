@@ -8,6 +8,8 @@ used by RequestContext.
 
 """
 
+from __future__ import unicode_literals
+
 
 def now(request):
     """Provides the current datetime to the context."""

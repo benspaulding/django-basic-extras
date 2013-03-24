@@ -1,5 +1,8 @@
 # -*- coding: utf-8 -*-
 
+from __future__ import unicode_literals
+
+
 def monkeypatch_method(cls):
     """
     Add a new method to a given class.

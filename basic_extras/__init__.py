@@ -16,4 +16,7 @@ little packages like this is fun. :)
 
 """
 
+from __future__ import unicode_literals
+
+
 __version__ = '1.0.1'
