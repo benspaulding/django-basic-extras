@@ -16,5 +16,5 @@ projects. Hopefully you find it useful.
 Requirements
 ------------
 
-* `Python 2.6 or 2.7 <http://www.python.org>`_
-* `Django 1.4.2 or newer <https://www.djangoproject.com>`_
+* `Python 2.7 or 3.3 <http://www.python.org>`_
+* `Django 1.4 or 1.5 <https://www.djangoproject.com>`_

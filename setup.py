@@ -1,13 +1,31 @@
 # -*- coding: utf-8 -*-
 
+import os
+
 from distutils.core import setup
 
 
-version = __import__('basic_extras').__version__
+here = os.path.dirname(__file__)
+
+
+def get_long_desc():
+    return open(os.path.join(here, 'README.rst')).read()
+
+
+# Function borrowed from carljm.
+def get_version():
+    fh = open(os.path.join(here, 'basic_extras', '__init__.py'))
+    try:
+        for line in fh.readlines():
+            if line.startswith('__version__ ='):
+                return line.split('=')[1].strip().strip("'")
+    finally:
+        fh.close()
+
 
 setup(
     name='django-basic-extras',
-    version=version,
+    version=get_version(),
     description='A small collection of some oft-used Django bits.',
     url='https://github.com/benspaulding/django-basic-extras/',
     author='Ben Spaulding',
@@ -24,7 +42,6 @@ setup(
             'locale/*/LC_MESSAGES/*',
         ],
     },
-    platforms=['Any'],
     classifiers=[
         'Development Status :: 5 - Production/Stable',
         'Environment :: Web Environment',
@@ -33,6 +50,7 @@ setup(
         'License :: OSI Approved :: BSD License',
         'Operating System :: OS Independent',
         'Programming Language :: Python',
+        'Programming Language :: Python :: 3',
         'Topic :: Internet :: WWW/HTTP :: Browsers',
         'Topic :: Internet :: WWW/HTTP :: Site Management',
     ],

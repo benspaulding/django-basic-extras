@@ -3,11 +3,18 @@
 
 language: python
 python:
+    - 3.3
     - 2.7
-    - 2.6
 env:
-    - DJANGO_VERSION=1.4.2
+    - DJANGO_VERSION=1.5
+    - DJANGO_VERSION=1.4.5
+matrix:
+  exclude:
+    - python: 3.3
+      env: DJANGO_VERSION=1.4.5
+before_install:
+    - export DJANGO_SETTINGS_MODULE="basic_extras.test_settings"
 install:
     - pip install --use-mirrors Django==$DJANGO_VERSION
     - python setup.py -q install
-script: django-admin.py test basic_extras --settings="basic_extras.tests.settings"
+script: django-admin.py test basic_extras

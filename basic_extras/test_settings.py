@@ -1,6 +1,12 @@
 # -*- coding: utf-8 -*-
 
-"""Settings for running app tests when not part of another project."""
+"""
+Settings for running app tests when not part of another project.
+
+"""
+
+from __future__ import unicode_literals
+
 
 DATABASES = {
     'default': {
@@ -13,5 +19,4 @@ INSTALLED_APPS = (
     'basic_extras',
 )
 
-# Required for Django >= 1.4.
 SECRET_KEY = 'super-secret!'
