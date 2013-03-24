@@ -74,4 +74,5 @@ class PageQuerystringTagTestCase(TestCase):
         self.assertEqual(page_querystring(self.context1, 2), '?page=2')
 
     def test_page_2_with_other_params(self):
-        self.assertEqual(page_querystring(self.context2, 2), '?foo=bar&page=2')
+        # Account for differnt orderings.
+        self.assertIn(page_querystring(self.context2, 2), ['?foo=bar&page=2', '?page=2&foo=bar'])
